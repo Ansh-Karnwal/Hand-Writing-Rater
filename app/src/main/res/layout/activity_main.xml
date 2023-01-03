@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#272727"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:orientation="vertical">
+        
+        <com.karnwal.handwritingrater.DrawableCanvas
+            android:id="@+id/canvas"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+        <TextView
+            android:id="@+id/displayText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:text="Please write &quot;Feast&quot; above and click Evaluate"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/clearCanvas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="2dp"
+                android:text="clear" />
+
+            <Button
+                android:id="@+id/evaluate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:text="Evaluate" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="100dp"
+        android:orientation="horizontal">
+
+        <com.github.anastr.speedviewlib.SpeedView
+            android:id="@+id/speedView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/suggestionsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="3dp"
+            android:text=""
+            android:autoLink="web"
+            android:textColor="#FFFFFF" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_marginBottom="60dp"
+        android:text="Red: Below Average\nYellow: Average Writing\nGreen: Above Average Writing"
+        android:textColor="#FFFFFF" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
